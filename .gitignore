@@ -1,2 +1,4 @@
 venv3
 .idea
+.coverage
+**/__pycache__
