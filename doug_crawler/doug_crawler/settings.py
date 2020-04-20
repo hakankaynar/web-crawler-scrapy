@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for ewg_synonym_crawler project
+# Scrapy settings for doug_crawler project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,31 +9,28 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'ewg_synonym_crawler'
+BOT_NAME = 'doug_crawler'
 
-SPIDER_MODULES = ['ewg_synonym_crawler.spiders']
-NEWSPIDER_MODULE = 'ewg_synonym_crawler.spiders'
+SPIDER_MODULES = ['doug_crawler.spiders']
+NEWSPIDER_MODULE = 'doug_crawler.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'ewg_synonym_crawler (+http://www.yourdomain.com)'
+#USER_AGENT = 'doug_crawler (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-# CONCURRENT_REQUESTS = 5
+#CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 4
-DOWNLOAD_TIMEOUT = 5
+DOWNLOAD_DELAY = 5
 # The download delay setting will honor only one of:
-# CONCURRENT_REQUESTS_PER_DOMAIN = 5
-# CONCURRENT_REQUESTS_PER_IP = 1
-RETRY_ENABLED = False
-REDIRECT_ENABLED = False
+#CONCURRENT_REQUESTS_PER_DOMAIN = 16
+CONCURRENT_REQUESTS_PER_IP = 1
 
 # Disable cookies (enabled by default)
 COOKIES_ENABLED = False
@@ -50,13 +47,13 @@ TELNETCONSOLE_ENABLED = False
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'ewg_synonym_crawler.middlewares.EwgSynonymCrawlerSpiderMiddleware': 543,
+#    'doug_crawler.middlewares.DougCrawlerSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'ewg_synonym_crawler.middlewares.EwgSynonymCrawlerDownloaderMiddleware': 543,
+#    'doug_crawler.middlewares.DougCrawlerDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -68,21 +65,21 @@ TELNETCONSOLE_ENABLED = False
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'ewg_synonym_crawler.pipelines.EwgSynonymCrawlerPipeline': 300,
+#    'doug_crawler.pipelines.DougCrawlerPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
-AUTOTHROTTLE_ENABLED = True
+#AUTOTHROTTLE_ENABLED = True
 # The initial download delay
-AUTOTHROTTLE_START_DELAY = 5
+#AUTOTHROTTLE_START_DELAY = 5
 # The maximum download delay to be set in case of high latencies
-AUTOTHROTTLE_MAX_DELAY = 120
+#AUTOTHROTTLE_MAX_DELAY = 60
 # The average number of requests Scrapy should be sending in parallel to
 # each remote server
-AUTOTHROTTLE_TARGET_CONCURRENCY = 1
-# Enable showing throttling stats for every response received:¡
-AUTOTHROTTLE_DEBUG = False
+#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
+# Enable showing throttling stats for every response received:
+#AUTOTHROTTLE_DEBUG = False
 
 # Enable and configure HTTP caching (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
