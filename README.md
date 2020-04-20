@@ -12,7 +12,7 @@ crawls ingredients from https://incidecoder.com/
 - `scrapy crawl ingredient_crawler -o ingredient_crawler.json -s JOBDIR=crawls/ingredient_crawler-1`
 
 ##### Testing ingredient crawler
-`export PYTHONPATH=${PYTHONPATH}:/Users/hakankaynar/PycharmProjects/web-crawler-scrapy`
+`export PYTHONPATH=${PYTHONPATH}:web-crawler-scrapy`
 
 ###### Only unittest
 `python3 -m unittest discover './ingredient_crawler/ingredient_crawler/test' '*_test.py'`
