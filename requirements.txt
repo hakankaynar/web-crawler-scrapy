@@ -3,12 +3,12 @@ Automat==20.2.0
 cffi==1.14.0
 constantly==15.1.0
 coverage==5.0.4
-cryptography==2.9
+cryptography==3.2
 cssselect==1.1.0
 hyperlink==19.0.0
 idna==2.9
 incremental==17.5.0
-lxml==4.5.0
+lxml==4.6.2
 parsel==1.5.2
 Protego==0.1.16
 pyasn1==0.4.8
@@ -18,10 +18,11 @@ PyDispatcher==2.0.5
 PyHamcrest==2.0.2
 pyOpenSSL==19.1.0
 queuelib==1.5.0
-Scrapy==2.0.1
+Scrapy==2.4.1
 service-identity==18.1.0
 six==1.14.0
 soupsieve==2.0
 Twisted==20.3.0
 w3lib==1.21.0
 zope.interface==5.1.0
+kafka-python==2.0.2

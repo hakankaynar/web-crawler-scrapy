@@ -1,0 +1,16 @@
+FROM python:latest
+
+RUN mkdir /opt/app
+
+COPY ingredient_crawler /opt/app/ingredient_crawler
+COPY requirements.txt /opt/app/requirements.txt
+
+WORKDIR /opt/app
+
+RUN pip3 install -r requirements.txt
+
+WORKDIR /opt/app/ingredient_crawler
+
+CMD scrapy crawl ingredient_crawler -o ingredient_crawler.json -s JOBDIR=crawls/ingredient_crawler-2
+
+
